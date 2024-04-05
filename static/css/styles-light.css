@@ -465,6 +465,14 @@ ul.pagination li {
   flex-direction: column;
 }
 
-#toc #TableOfContents ul li{
+#toc #TableOfContents ul li {
   margin-left: 1em;
+}
+
+#container main section#home ul li aside ul {
+  display: flex;
+}
+
+#container main section#home ul li aside ul li{
+  margin-right: 1em;
 }
