@@ -10,6 +10,15 @@
       {{ partial "featured_image" . }}
     {{ end }}
 
+    {{ if or .Params.Toc $.Site.Params.Toc }}
+    {{ if ne .Params.Toc false }}
+    <section>
+      <span>{{ T "table_of_contents" }}</span>
+      <aside id="toc">{{ .TableOfContents }}</aside>
+    </section>
+    {{ end }}
+    {{ end }}
+
     {{ .Content }}
 
 </article>

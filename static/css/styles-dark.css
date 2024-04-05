@@ -461,3 +461,11 @@ ul.pagination {
 ul.pagination li {
   padding: 0 1em;
 }
+
+#toc #TableOfContents ul {
+  flex-direction: column;
+}
+
+#toc #TableOfContents ul li {
+  margin-left: 1em;
+}
