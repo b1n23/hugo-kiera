@@ -1,0 +1,27 @@
+[categories]
+other = "分类："
+
+[readingTime]
+one = "阅读时间1分钟"
+other = "阅读时间 {{.Count}} 分钟"
+
+[readMore]
+other = "阅读更多…"
+
+[draft]
+other = "草稿"
+
+[subscribe]
+other = "RSS订阅"
+
+[rendered]
+other = "Rendered by"
+
+[comments]
+other = "添加/查看评论"
+
+[modifiedOn]
+other = "修改于"
+
+[table_of_contents]
+other  = "目录"
