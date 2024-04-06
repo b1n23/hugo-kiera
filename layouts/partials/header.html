@@ -3,7 +3,22 @@
 <html lang="{{ .Site.LanguageCode | default "en" }}">
 
 <head>
-  <title>{{ if and (not .IsHome) (.Title) }}{{ .Params.Title }} - {{ end }}{{ .Site.Title }}</title>
+  {{ block "title" . }}
+    {{- $title := "" -}}
+    {{- $siteTitle := $.Site.Title -}}
+    {{- $subtitle := $.Site.Params.Subtitle -}}
+    {{- $mainTitle := $siteTitle -}}
+    {{- if $subtitle -}}
+      {{- $mainTitle = printf "%s - %s" $siteTitle $subtitle -}}
+    {{- end -}}
+
+    {{- if .IsHome -}}
+      {{- $title = $mainTitle -}}
+    {{- else -}}
+      {{- $title = printf "%s - %s" .Title $siteTitle -}}
+    {{- end -}}
+    <title>{{- $title -}}</title>
+  {{ end }}
   {{ partial "meta" . }}
   {{ partialCached "header_includes" . -}}
 
